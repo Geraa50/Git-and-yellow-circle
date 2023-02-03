@@ -17,6 +17,7 @@ class Program(QMainWindow):
     def paintEvent(self, event):
         if self.do_paint:
             qp = QPainter()
+
             qp.begin(self)
             self.draw_flag(qp)
             qp.end()
@@ -26,7 +27,8 @@ class Program(QMainWindow):
         self.repaint()
 
     def draw_flag(self, qp):
-        qp.setBrush(QColor(255, 255, 0))
+        #  qp.setBrush(QColor(255, 255, 0))
+        qp.setPen(QPen(Qt.yellow, 8, Qt.SolidLine))
         diametr = random.randrange(1, 1000)
         x, y = random.randrange(1, 800), random.randrange(1, 600)
         qp.drawEllipse(x, y, diametr, diametr)
