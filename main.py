@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow
-from PyQt5.QtGui import QPainter, QPen, QColor
+from PyQt5.QtGui import QPainter, QPen
 from PyQt5.QtCore import Qt
 from PyQt5 import uic
 import random
@@ -12,7 +12,7 @@ class Program(QMainWindow):
         uic.loadUi('UI.ui', self)
         self.do_paint = False
         self.btn_generate.clicked.connect(self.paint)
-        #self.qp = QPainter(self)
+        #  self.qp = QPainter(self)
 
     def paintEvent(self, event):
         if self.do_paint:
