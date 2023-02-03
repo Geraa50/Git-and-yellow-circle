@@ -9,7 +9,7 @@ import random
 class Program(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('GitYandex.ui', self)
+        uic.loadUi('UI.ui', self)
         self.do_paint = False
         self.btn_generate.clicked.connect(self.paint)
         #self.qp = QPainter(self)
